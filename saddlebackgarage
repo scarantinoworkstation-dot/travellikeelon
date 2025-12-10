@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saddleback Garage Solutions | Lake Forest & Irvine</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #2c3e50; /* Premium Slate Blue */
+            --accent: #e67e22; /* Construction/Action Orange */
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #4a4a4a;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text);
+            background-color: #fff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            margin-left: 2rem;
+            font-weight: 600;
+        }
+        .cta-btn {
+            background: var(--accent);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .cta-btn:hover { background: #d35400; }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1595429035839-c99c298ffdde?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 1rem;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Process Section */
+        .section {
+            padding: 5rem 10%;
+            text-align: center;
+        }
+        .bg-light { background: var(--light); }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .card h3 { color: var(--primary); margin-top: 0; }
+        .icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+
+        /* Pricing Section */
+        .price-card {
+            border: 2px solid var(--light);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .price-card.featured {
+            border-color: var(--accent);
+            position: relative;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .price { font-size: 3rem; font-weight: 800; color: var(--primary); }
+        .price span { font-size: 1rem; font-weight: 400; color: #777; }
+        
+        /* Contact Form */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button.submit {
+            width: 100%;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Saddleback Garage</div>
+        <div class="nav-links">
+            <a href="#process">How It Works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact" class="cta-btn">Get a Quote</a>
+        </div>
+    </nav>
+
+    <header>
+        <div>
+            <h1>Reclaim Your Garage.</h1>
+            <p>We organize your chaos, manage the haul-away, and give you back your parking spot. Serving Lake Forest & Irvine.</p>
+            <a href="#contact" class="cta-btn" style="font-size: 1.2rem;">Start Your Transformation</a>
+        </div>
+    </header>
+
+    <section class="section" id="process">
+        <h2 style="font-size: 2.5rem; color: var(--primary);">More Than Just "Junk Removal"</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Most haulers just toss everything in a truck. We are <strong>Project Managers</strong> for your home. We sort, organize, and coordinate the heavy lifting so you don't have to.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <span class="icon">🔍</span>
+                <h3>1. The Sort</h3>
+                <p>We arrive and empty the space. Together, we categorize everything into Keep, Donate, and Trash. You make the decisions; we do the moving.</p>
+            </div>
+            <div class="card">
+                <span class="icon">🚛</span>
+                <h3>2. The Managed Haul</h3>
+                <p>We coordinate a trusted 3rd-party hauler to remove the trash immediately. No dumpsters sitting in your driveway to upset the HOA.</p>
+            </div>
+            <div class="card">
+                <span class="icon">📦</span>
+                <h3>3. The System</h3>
+                <p>We don't just shove things back. We install bins, label shelves, and create a system so your garage <em>stays</em> clean.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="pricing">
+        <h2 style="font-size: 2.5rem; color: var(--primary);">Simple, Transparent Pricing</h2>
+        <div class="grid" style="max-width: 900px; margin: 0 auto;">
+            
+            <div class="price-card featured">
+                <div style="background:var(--accent); color:white; padding:0.2rem; border-radius:4px; display:inline-block; margin-bottom:1rem; font-size:0.8rem; font-weight:bold;">MOST POPULAR</div>
+                <h3>The Full Transformation</h3>
+                <div class="price">$799<span>+</span></div>
+                <p>Perfect for the standard 2-car garage in OC.</p>
+                <ul style="text-align: left; list-style: none; padding: 0;">
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">✅ <strong>4-6 Hours</strong> of Professional Organizing</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">✅ <strong>Managed Haul-Away</strong> Coordination</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">✅ <strong>Donation Drop-off</strong> (Tax Receipt Included)</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">✅ <strong>Bin & Label System</strong> Setup</li>
+                </ul>
+                <a href="#contact" class="cta-btn" style="display:block; margin-top:2rem; text-align:center;">Book Now</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Custom Projects</h3>
+                <div class="price">Custom</div>
+                <p>For hoarding situations or extra-large estates.</p>
+                <ul style="text-align: left; list-style: none; padding: 0;">
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">🔹 Multi-day sessions</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">🔹 Shelf assembly & installation</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">🔹 Resale management for high-value items</li>
+                </ul>
+                <a href="#contact" class="cta-btn" style="display:block; margin-top:2rem; text-align:center; background: #999;">Contact Us</a>
+            </div>
+        </div>
+        <p style="margin-top: 2rem; color: #777; font-size: 0.9rem;">*Haul-away fees are passed directly to the client at cost (typically ~$250) to ensure transparency.</p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 style="font-size: 2.5rem; color: var(--primary);">Ready to Park in Your Garage Again?</h2>
+        <p>Fill out the form below for a free estimate. We serve Lake Forest, Irvine, and surrounding areas.</p>
+        
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <select name="service">
+                <option value="transformation">Full Garage Transformation</option>
+                <option value="organizing">Just Organizing (No Haul-Away)</option>
+                <option value="other">Other/Question</option>
+            </select>
+            <textarea name="message" rows="5" placeholder="Tell us about your garage (e.g., '2-car garage, mostly boxes and old furniture')." required></textarea>
+            <button type="submit" class="submit">Send Request</button>
+        </form>
+    </section>
+
+    <footer style="background: var(--primary); color: #fff; padding: 2rem; text-align: center;">
+        <p>&copy; 2025 Saddleback Garage Solutions. All rights reserved.</p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">Lake Forest, CA • Joseph Scarantino</p>
+    </footer>
+
+</body>
+</html>
